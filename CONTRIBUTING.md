@@ -10,7 +10,7 @@
 
 <!-- Title -->
   <a href="https://github.com/Thorin-the-Bearded/VS-Manage-Inventory/">
-    <img src="https://img.shields.io/badge/Inventory%20Management-22272E?logo=volkswagen&style=for-the-badge&logoColor=white)" alt="Volkswagen Inventory Management" height="140">
+    <img src="https://img.shields.io/badge/Inventory%20Management-22272E?logo=volkswagen&style=for-the-badge&logoColor=white)" alt="Volkswagen Inventory Management" height="120">
   </a>
 
   <h3 align="center">Contributing</h3>
