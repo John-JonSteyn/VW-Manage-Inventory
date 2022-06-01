@@ -41,6 +41,7 @@ article {
 
 .stock {
   padding: 0 2%;
+  margin-left: 10%
   /* border: 1px solid yellow; */
 }
 
@@ -66,4 +67,8 @@ article {
   border-left: 1px solid #e0e0e0;
   border-right: 1px solid #e0e0e0;
   cursor:default;
+}
+
+#header .stock {
+  margin-left: 0;
 }
