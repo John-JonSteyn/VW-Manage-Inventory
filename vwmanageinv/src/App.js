@@ -12,6 +12,7 @@ function App() {
       <h3 id='locationName'>Roodepoort</h3>
       <h1 id='pageName'>Manage Inventory</h1>
       <Table/>
+      <br/>
       <hr/>
       <Footer/>
     </div>
