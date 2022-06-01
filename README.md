@@ -78,6 +78,8 @@ Disclaimer: This is not the official system used by Volkswagen Group. This proje
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+
+
 ### Built With
 
 * [JavaScript](https://www.javascript.com/)
@@ -85,6 +87,8 @@ Disclaimer: This is not the official system used by Volkswagen Group. This proje
 * [Visual Studio Code](https://code.visualstudio.com/)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+
 
 <!-- GETTING STARTED -->
 ## Getting Started
@@ -97,17 +101,20 @@ Disclaimer: This is not the official system used by Volkswagen Group. This proje
 
 ### Installation
 
+
+
 <!-- USAGE EXAMPLES -->
 ## How to use Inventory Management System
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+
+
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Add Sales Page
-- [ ] Fix CSS Class Selectors
-- [ ] Fix CSS ID Selectors
+- [ ] Fix Blinding Navbar
+- [ ] Fix Broken Accordion
 - [ ] Support addition and deduction of stock
 
 See the [open issues](https://github.com/Thorin-the-Bearded/VW-Manage-Inventory/issues) for a full list of proposed features (and known issues).
@@ -140,6 +147,8 @@ Don't forget to give the project a star! Thanks again!
 Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
+
+
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
