@@ -1,44 +1,58 @@
 import React from 'react';
-import styles from './Table.module.css'
+import { useState } from 'react';
+import './Table.css';
 
 export class Table extends React.Component {
   render() {
+    
+    // const [selected, setSelected] = useState(null);
+    // const toggle = (i) => {
+    //   if (selected === i) {
+    //     return setSelected(null);
+    //   }
+
+    //   setSelected(i)
+    // }
+
     return (
-      <section>
-        <div className = 'wrapper'>
-          <div className = 'accordion'>
+      <section className='wrapper'>
+          <article className = 'accordion'>
+                <div className='title' id='header' /*onClick={ () => toggle(i)}*/>
+                  <div className='model'>
+                    <p>Model Name</p>
+                  </div>
+                  <div className='stock'>
+                    <p>Number in Stock</p>
+                  </div>
+                </div>
             {data.map((item, i) => (
-              /* class + id selectors fail in css file
-                 inline styling is used */
-              <article>
-                <div className='title'>
-                  <p>
-                    <span className='model'>
-                      {item.model}
-                    </span>
-                    <span className='stock'>
-                      {item.stock}
-                    </span>
-                  </p>
+              <div>
+                <div className='title' /*onClick={ () => toggle(i)}*/>
+                  <div className='model'>
+                    <p>{item.model}</p>
+                  </div>
+                  <div className='stock'>
+                    <p>{item.stock}</p>
+                  </div>
                 </div>
                 <aside className='details'>
-                  <p>
-                    <span className='features'>
-                      {item.features}
-                    </span>
-                    <span className='price'>
-                      {item.price}
-                    </span>
-                    <span className='buttons'>
-                      <button>+</button>
-                      <button>-</button>
-                      </span>
-                  </p>
+                  <div className='make'>
+                    <p>{item.make}</p>
+                  </div>
+                  <div className='features'>
+                    <p>{item.features}</p>
+                  </div>
+                  <div className='price'>
+                    <p>{item.price}</p>
+                  </div>
+                  <div className='buttonBox'>
+                    <button>+</button>
+                    <button>-</button>
+                  </div>
                 </aside>
-              </article>
+              </div>
             ))}
-          </div>
-        </div>
+          </article>
       </section>   
     );
   }

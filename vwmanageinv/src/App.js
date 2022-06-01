@@ -9,8 +9,8 @@ function App() {
     <div className="App">
       <Navbar/>
       <hr/>
-      <h1>Roodepoort</h1>
-      <h3>Manage Inventory</h3>
+      <h3 id='locationName'>Roodepoort</h3>
+      <h1 id='pageName'>Manage Inventory</h1>
       <Table/>
       <hr/>
       <Footer/>

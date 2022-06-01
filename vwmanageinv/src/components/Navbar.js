@@ -1,20 +1,31 @@
 import React from 'react';
-import styles from './Navbar.module.css'
+import './Navbar.css'
 
 const page = [
   {
-    title :'Home',
-    url   :'#',
+    title :'VW Home',
+    url   :'https://www.vw.co.za/en.html',
     cName :'nav-links'
   },
   {
     title :'Manage Stock',
     url   :'#',
     cName :'nav-links'
+  },
+  {
+    title :'Guide',
+    url   :'https://github.com/Thorin-the-Bearded/VW-Manage-Inventory',
+    cName :'nav-links'
   }
 ];
 
 export class Navbar extends React.Component {
+  state = { clicked: false}
+
+  handleClick = () => {
+    this.setState( { clicked: !this.state.clicked } )
+  }
+
   render() {
     return (
       <nav class='NavBarItems'>
@@ -22,9 +33,12 @@ export class Navbar extends React.Component {
             <path d='M0 4h24v2H0zM0 11h14v2H0zM0 18h20v2H0z'></path>
         </svg>
         <h3 className='navbar-logo'>
-           Staff Home
+           Menu
         </h3>
-        <ul>
+        <div className="menu-icon" onClick={this.handleClick}>
+          <i className={ this.state.clicked ? 'fas fa-times' : 'fas fa-bars' }></i>
+        </div>
+        <ul className={this.state.clicked ? 'nave-menu active' : 'nav-menu'}>
           {page.map((item, index) => {
             return (
               /* Key used for <li> order */
@@ -35,10 +49,9 @@ export class Navbar extends React.Component {
               </li>
             )
           })}
-          
         </ul>
-        <a href='#'>
-          <svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <a href='https://www.vw.co.za/en.html'>
+          <svg className='vw-logo' role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
             <title>
               Volkswagen
             </title>

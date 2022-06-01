@@ -1,0 +1,69 @@
+ /* Style the buttons that are used to open and close the accordion panel */
+section {
+   padding: 0 10%;
+ }
+
+article {
+   background-color: #F3F3F3;
+}
+
+.accordion {
+   width: 100%;
+}
+
+.title {
+  align-items: stretch;
+  background: #fafdff;
+  /* border: 1px solid brown; */
+  display: grid;
+  grid-template-columns: 4fr 1fr;
+  text-align: justify;
+  /*cursor for intended accordion*/
+  cursor: pointer;
+  border-top: 1px solid #e0e0e0;
+}
+
+.details {
+  background-color: #FFF;
+  /* border: 1px solid black; */
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr 1fr;
+  text-align: justify;
+  /* height: 0;
+  opacity: 0; */
+  transition: all 0.6s ease;
+}
+
+.model {
+  padding: 0 3%;
+  /* border: 1px solid orange; */
+}
+
+.stock {
+  padding: 0 2%;
+  /* border: 1px solid yellow; */
+}
+
+.make {
+  margin-left: 10%;
+}
+
+.make, .features, .price {
+  padding: 0 3%;
+  /* border: 1px solid green; */
+}
+
+.buttonBox {
+  padding: 3% 3% 0;
+  /* border: 1px solid purple; */
+  display: inline;
+  float: right;
+}
+
+#header {
+  background-color: #f5f8fa;
+  font-weight: 600;
+  border-left: 1px solid #e0e0e0;
+  border-right: 1px solid #e0e0e0;
+  cursor:default;
+}
