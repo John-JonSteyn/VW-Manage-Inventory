@@ -14,7 +14,7 @@
     <img src="https://img.shields.io/badge/Inventory%20Management-22272E?logo=volkswagen&style=for-the-badge&logoColor=white)" alt="Volkswagen Inventory Management" height="120">
   </a>
 
-  <h3 align="center">Das Auto</h3>
+  <h2 align="center">Das Auto</h3>
   
   <hr>
   
@@ -113,6 +113,8 @@ Disclaimer: This is not the official system used by Volkswagen Group. This proje
 <!-- ROADMAP -->
 ## Roadmap
 
+- [x] Fix Broken Style Sheets
+- [x] Fix Broken Table Layout
 - [ ] Fix Blinding Navbar
 - [ ] Fix Broken Accordion
 - [ ] Support addition and deduction of stock
@@ -158,13 +160,13 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- MARKDOWN LINKS & IMAGES -->
-[contributors-shield]: https://img.shields.io/github/contributors/Thorin-the-Bearded/VW-Manage-Inventory.svg?style=for-the-badge&color=FFFFFF
+[contributors-shield]: https://img.shields.io/github/contributors/Thorin-the-Bearded/VW-Manage-Inventory.svg?style=for-the-badge&color=151F5D
 [contributors-url]: https://github.com/Thorin-the-Bearded/VW-Manage-Inventory/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Thorin-the-Bearded/VW-Manage-Inventory.svg?style=for-the-badge&color=000000
+[forks-shield]: https://img.shields.io/github/forks/Thorin-the-Bearded/VW-Manage-Inventory.svg?style=for-the-badge&color=FFFFFF
 [forks-url]: https://github.com/Thorin-the-Bearded/VW-Manage-Inventory/network/members
-[stars-shield]: https://img.shields.io/github/stars/Thorin-the-Bearded/VW-Manage-Inventory.svg?style=for-the-badge&color=FFFFFF
+[stars-shield]: https://img.shields.io/github/stars/Thorin-the-Bearded/VW-Manage-Inventory.svg?style=for-the-badge&color=151F5D
 [stars-url]: https://github.com/Thorin-the-Bearded/VW-Manage-Inventory/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Thorin-the-Bearded/VW-Manage-Inventory.svg?style=for-the-badge&color=000000
+[issues-shield]: https://img.shields.io/github/issues/Thorin-the-Bearded/VW-Manage-Inventory.svg?style=for-the-badge&color=FFFFFF
 [issues-url]: https://github.com/Thorin-the-Bearded/VW-Manage-Inventory/issues
-[license-shield]: https://img.shields.io/github/license/Thorin-the-Bearded/VW-Manage-Inventory.svg?style=for-the-badge&color=FFFFFF
+[license-shield]: https://img.shields.io/github/license/Thorin-the-Bearded/VW-Manage-Inventory.svg?style=for-the-badge&color=151F5D
 [license-url]: https://github.com/Thorin-the-Bearded/VW-Manage-Inventory/blob/master/LICENSE.txt
