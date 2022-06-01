@@ -1,0 +1,32 @@
+h1, h2, h3, h4, h5, h6, p {
+    color: #000;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    font-family: 'Encode Sans', sans-serif;
+}
+
+button {
+    background-color: #FFF;
+    border-radius: 2rem;
+    border: 1px solid #333;
+    margin: 0 0.3rem;
+    padding: 0.5rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #E3EFFF;
+    color: #000;
+}
+
+a:hover {
+    background-color: #EEE;
+}
