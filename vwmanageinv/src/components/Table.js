@@ -3,8 +3,24 @@ import { useState } from 'react';
 import './Table.css';
 
 export class Table extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      vehicles: []
+    }
+  };
+
+  componentDidMount() {
+    fetch('https://localhost:7167/api/Vehicle/')
+        .then(response => response.json())
+        .then(jsonResponse => {
+           this.setState({vehicles: jsonResponse})
+        })
+  };
+
   render() {
     
+    // Accordion
     // const [selected, setSelected] = useState(null);
     // const toggle = (i) => {
     //   if (selected === i) {
@@ -25,14 +41,14 @@ export class Table extends React.Component {
                     <p>Number in Stock</p>
                   </div>
                 </div>
-            {data.map((item, i) => (
+            {this.state.vehicles.map((item, i) => (
               <div>
                 <div className='title' /*onClick={ () => toggle(i)}*/>
                   <div className='model'>
                     <p>{item.model}</p>
                   </div>
                   <div className='stock'>
-                    <p>{item.stock}</p>
+                    <p>{item.numStock}</p>
                   </div>
                 </div>
                 <aside className='details'>
