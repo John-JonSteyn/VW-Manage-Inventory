@@ -9,7 +9,7 @@ export class Footer extends React.Component {
           <div>
             <h4>
               <a href='https://www.vw.co.za/en.html'> VW Home Page</a> | 
-              <a> Manage Inventory</a> |
+              <a href='#'> Manage Inventory</a> |
               <a href='https://github.com/Thorin-the-Bearded/VW-Manage-Inventory'> Guide</a>
             </h4>
           </div>
