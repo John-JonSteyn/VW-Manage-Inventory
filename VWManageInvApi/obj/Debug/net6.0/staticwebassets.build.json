@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "gwSw5jjMGoBLHo2iZ1hoi4SB5Hm2f2ids0rSRsrv9oM=",
+  "Source": "VWManageInvApi",
+  "BasePath": "_content/VWManageInvApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
