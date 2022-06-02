@@ -3,12 +3,12 @@ using System.Diagnostics.CodeAnalysis;
 
 namespace VWManageInvApi.Models
 {
-    public class VehiclesdContext : DbContext
+    public class VehicleContext : DbContext
     {
-        public VehiclesdContext(DbContextOptions<VehiclesdContext> options)
+        public VehicleContext(DbContextOptions<VehicleContext> options)
             : base(options)
         {
         }
-        public DbSet<Vehiclesd> Inventory { get; set; } = null!;
+        public DbSet<Vehicle> Vehicles { get; set; } = null!;
     }
 }
