@@ -11,11 +11,12 @@ export class Table extends React.Component {
   };
 
   componentDidMount() {
-    fetch('https://localhost:7167/api/Vehicle/')
+    fetch('https://localhost:7167/api/Vehicle/', {"Access-Control-Allow-Origin": "*"})
         .then(response => response.json())
         .then(jsonResponse => {
            this.setState({vehicles: jsonResponse})
-        })
+        }
+      )
   };
 
   render() {

@@ -3,6 +3,15 @@ using VWManageInvApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors(options =>
+{
+    options.AddDefaultPolicy(
+                      policy  =>
+                      {
+                          policy.WithOrigins("http://localhost:3000");
+                      });
+});
+
 // Add services to the container.
 builder.Services.AddControllers();
 builder.Services.AddDbContext<VehicleContext>(opt =>
@@ -17,6 +26,8 @@ if (builder.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+
+app.UseCors();
 
 app.UseAuthorization();
 
