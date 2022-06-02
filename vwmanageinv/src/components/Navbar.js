@@ -28,7 +28,7 @@ export class Navbar extends React.Component {
 
   render() {
     return (
-      <nav class='NavBarItems'>
+      <nav className='NavBarItems'>
         <svg aria-hidden='true' width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' fill='currentColor'>
             <path d='M0 4h24v2H0zM0 11h14v2H0zM0 18h20v2H0z'></path>
         </svg>
