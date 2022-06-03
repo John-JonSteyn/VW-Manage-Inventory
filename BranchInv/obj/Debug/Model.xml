@@ -50,7 +50,7 @@
 					<Element Type="SqlIndexedColumnSpecification">
 						<Relationship Name="Column">
 							<Entry>
-								<References Name="[dbo].[ModelList].[Model]" />
+								<References Name="[dbo].[Vehicle].[Id]" />
 							</Entry>
 						</Relationship>
 					</Element>
@@ -58,102 +58,81 @@
 			</Relationship>
 			<Relationship Name="DefiningTable">
 				<Entry>
-					<References Name="[dbo].[ModelList]" />
+					<References Name="[dbo].[Vehicle]" />
 				</Entry>
 			</Relationship>
 			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="3" />
 		</Element>
-		<Element Type="SqlPrimaryKeyConstraint">
-			<Relationship Name="ColumnSpecifications">
-				<Entry>
-					<Element Type="SqlIndexedColumnSpecification">
-						<Relationship Name="Column">
-							<Entry>
-								<References Name="[dbo].[ModelStock].[Model]" />
-							</Entry>
-						</Relationship>
-					</Element>
-				</Entry>
-			</Relationship>
-			<Relationship Name="DefiningTable">
-				<Entry>
-					<References Name="[dbo].[ModelStock]" />
-				</Entry>
-			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="4" />
-		</Element>
-		<Element Type="SqlPrimaryKeyConstraint">
-			<Relationship Name="ColumnSpecifications">
-				<Entry>
-					<Element Type="SqlIndexedColumnSpecification">
-						<Relationship Name="Column">
-							<Entry>
-								<References Name="[dbo].[ModelDetails].[Model]" />
-							</Entry>
-						</Relationship>
-					</Element>
-				</Entry>
-			</Relationship>
-			<Relationship Name="DefiningTable">
-				<Entry>
-					<References Name="[dbo].[ModelDetails]" />
-				</Entry>
-			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="5" />
-		</Element>
-		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_ModelDetails_ModelList]">
-			<Relationship Name="Columns">
-				<Entry>
-					<References Name="[dbo].[ModelDetails].[Model]" />
-				</Entry>
-			</Relationship>
-			<Relationship Name="DefiningTable">
-				<Entry>
-					<References Name="[dbo].[ModelDetails]" />
-				</Entry>
-			</Relationship>
-			<Relationship Name="ForeignColumns">
-				<Entry>
-					<References Name="[dbo].[ModelList].[Model]" />
-				</Entry>
-			</Relationship>
-			<Relationship Name="ForeignTable">
-				<Entry>
-					<References Name="[dbo].[ModelList]" />
-				</Entry>
-			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="6" />
-		</Element>
-		<Element Type="SqlForeignKeyConstraint" Name="[dbo].[FK_ModelStock_ModelList]">
-			<Relationship Name="Columns">
-				<Entry>
-					<References Name="[dbo].[ModelStock].[Model]" />
-				</Entry>
-			</Relationship>
-			<Relationship Name="DefiningTable">
-				<Entry>
-					<References Name="[dbo].[ModelStock]" />
-				</Entry>
-			</Relationship>
-			<Relationship Name="ForeignColumns">
-				<Entry>
-					<References Name="[dbo].[ModelList].[Model]" />
-				</Entry>
-			</Relationship>
-			<Relationship Name="ForeignTable">
-				<Entry>
-					<References Name="[dbo].[ModelList]" />
-				</Entry>
-			</Relationship>
-			<Annotation Type="SqlInlineConstraintAnnotation" Disambiguator="7" />
-		</Element>
-		<Element Type="SqlTable" Name="[dbo].[ModelDetails]">
+		<Element Type="SqlProcedure" Name="[dbo].[spCreateVehicle]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	BEGIN
+		INSERT INTO dbo.Vehicle (Id, Make, Model, Features, Price, Numstock)
+		VALUES(@Id, @Make, @Model, @Features, @Price, @NumStock);
+	END
+RETURN 0]]></Value>
+			</Property>
 			<Property Name="IsAnsiNullsOn" Value="True" />
-			<Relationship Name="Columns">
+			<Relationship Name="BodyDependencies">
 				<Entry>
-					<Element Type="SqlSimpleColumn" Name="[dbo].[ModelDetails].[Model]">
-						<Property Name="IsNullable" Value="False" />
-						<Relationship Name="TypeSpecifier">
+					<References Name="[dbo].[Vehicle]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Vehicle].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Vehicle].[Make]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Vehicle].[Model]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Vehicle].[Features]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Vehicle].[Price]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Vehicle].[NumStock]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spCreateVehicle].[@Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spCreateVehicle].[@Make]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spCreateVehicle].[@Model]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spCreateVehicle].[@Features]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spCreateVehicle].[@Price]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spCreateVehicle].[@NumStock]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spCreateVehicle].[@Id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spCreateVehicle].[@Make]">
+						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
 									<Relationship Name="Type">
@@ -167,8 +146,8 @@
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSimpleColumn" Name="[dbo].[ModelDetails].[Features]">
-						<Relationship Name="TypeSpecifier">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spCreateVehicle].[@Model]">
+						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
 									<Relationship Name="Type">
@@ -182,13 +161,43 @@
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSimpleColumn" Name="[dbo].[ModelDetails].[Price]">
-						<Relationship Name="TypeSpecifier">
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spCreateVehicle].[@Features]">
+						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
 									<Relationship Name="Type">
 										<Entry>
 											<References ExternalSource="BuiltIns" Name="[text]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spCreateVehicle].[@Price]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[text]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spCreateVehicle].[@NumStock]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
 										</Entry>
 									</Relationship>
 								</Element>
@@ -202,36 +211,42 @@
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="6" />
-			<AttachedAnnotation Disambiguator="5" />
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="290" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spCreateVehicle]&#xD;&#xA;&#x9;@Id int,&#xD;&#xA;&#x9;@Make text,&#xD;&#xA;&#x9;@Model text,&#xD;&#xA;&#x9;@Features text,&#xD;&#xA;&#x9;@Price text,&#xD;&#xA;&#x9;@NumStock int&#xD;&#xA;AS" />
+			</Annotation>
 		</Element>
-		<Element Type="SqlTable" Name="[dbo].[ModelList]">
+		<Element Type="SqlProcedure" Name="[dbo].[spDeleteVehicle]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	BEGIN
+		DELETE FROM dbo.Vehicle WHERE Id = @Id
+	END
+RETURN 0]]></Value>
+			</Property>
 			<Property Name="IsAnsiNullsOn" Value="True" />
-			<Relationship Name="Columns">
+			<Relationship Name="BodyDependencies">
 				<Entry>
-					<Element Type="SqlSimpleColumn" Name="[dbo].[ModelList].[Make]">
-						<Relationship Name="TypeSpecifier">
-							<Entry>
-								<Element Type="SqlTypeSpecifier">
-									<Relationship Name="Type">
-										<Entry>
-											<References ExternalSource="BuiltIns" Name="[text]" />
-										</Entry>
-									</Relationship>
-								</Element>
-							</Entry>
-						</Relationship>
-					</Element>
+					<References Name="[dbo].[Vehicle]" />
 				</Entry>
 				<Entry>
-					<Element Type="SqlSimpleColumn" Name="[dbo].[ModelList].[Model]">
-						<Property Name="IsNullable" Value="False" />
-						<Relationship Name="TypeSpecifier">
+					<References Name="[dbo].[Vehicle].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[spDeleteVehicle].[@Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[spDeleteVehicle].[@Id]">
+						<Relationship Name="Type">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
 									<Relationship Name="Type">
 										<Entry>
-											<References ExternalSource="BuiltIns" Name="[text]" />
+											<References ExternalSource="BuiltIns" Name="[int]" />
 										</Entry>
 									</Relationship>
 								</Element>
@@ -245,14 +260,237 @@
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="3" />
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="120" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spDeleteVehicle]&#xD;&#xA;&#x9;@Id int&#xD;&#xA;AS" />
+			</Annotation>
 		</Element>
-		<Element Type="SqlTable" Name="[dbo].[ModelStock]">
+		<Element Type="SqlProcedure" Name="[dbo].[spReadVehicle]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	SELECT [Id], [Make], [Model], [Features], [Price], [NumStock] FROM dbo.Vehicle;
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Vehicle]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Vehicle].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Vehicle].[Make]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Vehicle].[Model]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Vehicle].[Features]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Vehicle].[Price]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Vehicle].[NumStock]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="136" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[spReadVehicle]&#xD;&#xA;&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlProcedure" Name="[dbo].[UpdateVehicle]">
+			<Property Name="BodyScript">
+				<Value><![CDATA[
+	BEGIN
+		UPDATE dbo.Vehicle
+		SET Make = @Make,
+			Model = @Model,
+			Features = @Features,
+			Price = @Price,
+			NumStock = @NumStock
+		WHERE Id = @Id
+	END
+RETURN 0]]></Value>
+			</Property>
+			<Property Name="IsAnsiNullsOn" Value="True" />
+			<Relationship Name="BodyDependencies">
+				<Entry>
+					<References Name="[dbo].[Vehicle]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Vehicle].[Make]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateVehicle].[@Make]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Vehicle].[Model]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateVehicle].[@Model]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Vehicle].[Features]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateVehicle].[@Features]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Vehicle].[Price]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateVehicle].[@Price]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Vehicle].[NumStock]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateVehicle].[@NumStock]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[Vehicle].[Id]" />
+				</Entry>
+				<Entry>
+					<References Name="[dbo].[UpdateVehicle].[@Id]" />
+				</Entry>
+			</Relationship>
+			<Relationship Name="Parameters">
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateVehicle].[@Id]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateVehicle].[@Make]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[text]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateVehicle].[@Model]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[text]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateVehicle].[@Features]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[text]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateVehicle].[@Price]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[text]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSubroutineParameter" Name="[dbo].[UpdateVehicle].[@NumStock]">
+						<Relationship Name="Type">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+			</Relationship>
+			<Relationship Name="Schema">
+				<Entry>
+					<References ExternalSource="BuiltIns" Name="[dbo]" />
+				</Entry>
+			</Relationship>
+			<Annotation Type="SysCommentsObjectAnnotation">
+				<Property Name="Length" Value="307" />
+				<Property Name="StartLine" Value="1" />
+				<Property Name="StartColumn" Value="1" />
+				<Property Name="HeaderContents" Value="CREATE PROCEDURE [dbo].[UpdateVehicle]&#xD;&#xA;&#x9;@Id int,&#xD;&#xA;&#x9;@Make text,&#xD;&#xA;&#x9;@Model text,&#xD;&#xA;&#x9;@Features text,&#xD;&#xA;&#x9;@Price text,&#xD;&#xA;&#x9;@NumStock int&#xD;&#xA;AS" />
+			</Annotation>
+		</Element>
+		<Element Type="SqlTable" Name="[dbo].[Vehicle]">
 			<Property Name="IsAnsiNullsOn" Value="True" />
 			<Relationship Name="Columns">
 				<Entry>
-					<Element Type="SqlSimpleColumn" Name="[dbo].[ModelStock].[Model]">
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Vehicle].[Id]">
 						<Property Name="IsNullable" Value="False" />
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[int]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+						<AttachedAnnotation Disambiguator="3" />
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Vehicle].[Make]">
 						<Relationship Name="TypeSpecifier">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -267,7 +505,52 @@
 					</Element>
 				</Entry>
 				<Entry>
-					<Element Type="SqlSimpleColumn" Name="[dbo].[ModelStock].[NumStock]">
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Vehicle].[Model]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[text]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Vehicle].[Features]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[text]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Vehicle].[Price]">
+						<Relationship Name="TypeSpecifier">
+							<Entry>
+								<Element Type="SqlTypeSpecifier">
+									<Relationship Name="Type">
+										<Entry>
+											<References ExternalSource="BuiltIns" Name="[text]" />
+										</Entry>
+									</Relationship>
+								</Element>
+							</Entry>
+						</Relationship>
+					</Element>
+				</Entry>
+				<Entry>
+					<Element Type="SqlSimpleColumn" Name="[dbo].[Vehicle].[NumStock]">
 						<Relationship Name="TypeSpecifier">
 							<Entry>
 								<Element Type="SqlTypeSpecifier">
@@ -287,8 +570,6 @@
 					<References ExternalSource="BuiltIns" Name="[dbo]" />
 				</Entry>
 			</Relationship>
-			<AttachedAnnotation Disambiguator="7" />
-			<AttachedAnnotation Disambiguator="4" />
 		</Element>
 	</Model>
 </DataSchemaModel>

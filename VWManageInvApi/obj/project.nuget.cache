@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "mGpD/XWKpIapwcjEf8AlkD6AeuapYjSxMXtbRcqIpY1BaND75MGwjjlnvURgMZ/0RUHv79sqMu/RZ8uFBaTS+w==",
+  "dgSpecHash": "Yi2Eq/qEU8ODqMI34/C8uO72b2WPPqn4ZGpXq4Ttt7qIHRJu90HR1gzqgGDXzWpz4Uj5sSleK2y+m3kju4BPPQ==",
   "success": true,
-  "projectFilePath": "D:\\Projects\\NewsClip\\VW Inventory management\\VW-Manage-Inventory\\VWManageInvApi\\VWManageInvApi.csproj",
+  "projectFilePath": "D:\\Projects\\NewsClip\\VW-Manage-Inventory\\VWManageInvApi\\VWManageInvApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\johnj\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\johnj\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\NewsClip\\VW Inventory management\\VW-Manage-Inventory\\VWManageInvApi\\VWManageInvApi.csproj": {}
+    "D:\\Projects\\NewsClip\\VW-Manage-Inventory\\VWManageInvApi\\VWManageInvApi.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\NewsClip\\VW Inventory management\\VW-Manage-Inventory\\VWManageInvApi\\VWManageInvApi.csproj": {
+    "D:\\Projects\\NewsClip\\VW-Manage-Inventory\\VWManageInvApi\\VWManageInvApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\NewsClip\\VW Inventory management\\VW-Manage-Inventory\\VWManageInvApi\\VWManageInvApi.csproj",
+        "projectUniqueName": "D:\\Projects\\NewsClip\\VW-Manage-Inventory\\VWManageInvApi\\VWManageInvApi.csproj",
         "projectName": "VWManageInvApi",
-        "projectPath": "D:\\Projects\\NewsClip\\VW Inventory management\\VW-Manage-Inventory\\VWManageInvApi\\VWManageInvApi.csproj",
+        "projectPath": "D:\\Projects\\NewsClip\\VW-Manage-Inventory\\VWManageInvApi\\VWManageInvApi.csproj",
         "packagesPath": "C:\\Users\\johnj\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\NewsClip\\VW Inventory management\\VW-Manage-Inventory\\VWManageInvApi\\obj\\",
+        "outputPath": "D:\\Projects\\NewsClip\\VW-Manage-Inventory\\VWManageInvApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\johnj\\AppData\\Roaming\\NuGet\\NuGet.Config"
