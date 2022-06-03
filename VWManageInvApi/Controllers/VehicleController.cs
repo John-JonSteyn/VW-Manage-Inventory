@@ -84,13 +84,12 @@ namespace VWManageInvApi.Controllers
         // POST: api/Vehicle
         // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
         [HttpPost]
-        public async Task<ActionResult<Vehicle>> PostVehicle(Vehicle vehicle)
+        public async Task<ActionResult<Vehicle[]>> PostVehicle(Vehicle[] vehicles)
         {
-            _context.Vehicles.Add(vehicle);
+            _context.Vehicles.AddRange(vehicles);
             await _context.SaveChangesAsync();
 
-            //return CreatedAtAction("GetTodoItem", new { id = todoItem.Id }, todoItem);
-            return CreatedAtAction(nameof(GetVehicle), new { id = vehicle.Id }, vehicle);
+            return NoContent();
         }
 
         // DELETE: api/Vehicle/5
