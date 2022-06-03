@@ -240,7 +240,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 ## Acknowledgments
 I found this project to be challenging, albeit rewarding. I would not have made it far if it had not been for:
 
-* [Astrid](https://twitter.com/Thorin_Bearded)'s loving support and encouragement.
+* [Astrid](https://twitter.com/Astrid_Braided)'s loving support and encouragement.
 * [Dewald](https://github.com/dewald-L)'s technical expertise nudging me in the right direction.
 
 
