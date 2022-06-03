@@ -29,12 +29,12 @@ export class Navbar extends React.Component {
   render() {
     return (
       <nav className='NavBarItems'>
-        <svg aria-hidden='true' width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' fill='currentColor'>
+        {/* <svg aria-hidden='true' width='24' height='24' viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' fill='currentColor'>
             <path d='M0 4h24v2H0zM0 11h14v2H0zM0 18h20v2H0z'></path>
         </svg>
         <h3 className='navbar-logo'>
            Menu
-        </h3>
+        </h3> */}
         <div className="menu-icon" onClick={this.handleClick}>
           <i className={ this.state.clicked ? 'fas fa-times' : 'fas fa-bars' }></i>
         </div>
