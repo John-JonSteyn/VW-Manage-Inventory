@@ -56,7 +56,7 @@ nav svg {
 }
 
 
-@media screen and (max-width: 960px) {
+/* @media screen and (max-width: 960px) {
     .NavBarItems {
         position: relative;
     }
@@ -113,4 +113,4 @@ nav svg {
         color: #151F5D;
         font-size: 2rem;
     }
-}
+} */
