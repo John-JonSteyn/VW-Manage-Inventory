@@ -1,0 +1,6 @@
+D:\Projects\NewsClip\VW-Manage-Inventory\BranchInv\bin\Debug\BranchInv.dacpac
+D:\Projects\NewsClip\VW-Manage-Inventory\BranchInv\obj\Debug\BranchInv.sqlproj.AssemblyReference.cache
+D:\Projects\NewsClip\VW-Manage-Inventory\BranchInv\obj\Debug\BranchInv.dll
+D:\Projects\NewsClip\VW-Manage-Inventory\BranchInv\obj\Debug\BranchInv.pdb
+D:\Projects\NewsClip\VW-Manage-Inventory\BranchInv\bin\Debug\BranchInv.dll
+D:\Projects\NewsClip\VW-Manage-Inventory\BranchInv\bin\Debug\BranchInv.pdb

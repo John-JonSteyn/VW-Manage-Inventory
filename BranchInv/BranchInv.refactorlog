@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Operations Version="1.0" xmlns="http://schemas.microsoft.com/sqlserver/dac/Serialization/2012/02">
+  <Operation Name="Rename Refactor" Key="9b4256ce-ebc3-49dd-bd7e-baad13940ad0" ChangeDateTime="06/03/2022 06:41:28">
+    <Property Name="ElementName" Value="[dbo].[FK_Model_ToTable]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[Model]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_Model_Make]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="9cb12e46-7362-4905-b825-be541052629a" ChangeDateTime="06/03/2022 06:44:42">
+    <Property Name="ElementName" Value="[dbo].[FK_ModelDetails_ToTable]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[ModelDetails]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_ModelDetails_ModelStock]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="fac6edba-71cc-418b-83f7-0c7bbe54a75b" ChangeDateTime="06/03/2022 06:44:59">
+    <Property Name="ElementName" Value="[dbo].[FK_Model_Make]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[Model]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_ModelStock_Manufacturer]" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="c4b7ed11-e4d9-46b2-a636-3b8b695c3499" ChangeDateTime="06/03/2022 06:46:48">
+    <Property Name="ElementName" Value="[dbo].[Manufacturer].[Make]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Manufacturer]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Model" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="39f80bb4-3556-4667-ad80-016d37162435" ChangeDateTime="06/03/2022 06:47:55">
+    <Property Name="ElementName" Value="[dbo].[Manufacturer].[Model]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Manufacturer]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Manufacturer" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="9c2bc2ee-4421-432a-a5ed-5fe79c40b96b" ChangeDateTime="06/03/2022 06:48:28">
+    <Property Name="ElementName" Value="[dbo].[Model].[Make]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[Model]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Model" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="d7aaf95a-f1a9-4c01-93a8-f7dd6ae85b12" ChangeDateTime="06/03/2022 06:52:29">
+    <Property Name="ElementName" Value="[dbo].[ModelStock].[Numstock]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[ModelStock]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="NumStock" />
+  </Operation>
+</Operations>
