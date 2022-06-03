@@ -51,7 +51,6 @@
     </li>
     <li><a href="#how-to-use-inventory-management-system">How to use Inventory Management System</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
     <li><a href="#resources">Resources</a></li>
@@ -109,19 +108,20 @@ Note: This project was made within 94 hours without prior API, React nor Visual 
 
 ### Installation
 
-1. Navigate to the directory you would like to install the Inventory Manager:
-  ```sh
-  cd [DirectoryPathHere]
-  ```
-2. Clone the repository by entering the following command into your shell:
+1. Clone the repository by entering the following command into your shell:
    ```sh
    git clone Thorin-the-Bearded/VW-Manage-Inventory.git
    ```
+
 ### Running Front-End Server:
 
-3. Within your terminal, change to the "\.vwmanageinv\" directory with the following command:
+2. Within your terminal, change to the "\.vwmanageinv\" directory with the following command:
    ```sh
    cd .\VW-Manage-Inventory\vwmanageinv\
+   ```
+3. Run the following command to run the server:
+   ```sh
+   npm i
    ```
 4. Run the following command to run the server:
    ```sh
@@ -140,6 +140,8 @@ Note: This project was made within 94 hours without prior API, React nor Visual 
    ```
 
 ### Sending Information to API:
+
+A database is yet to be connected, until then the project uses In Memory DB.
 
 7. Copy the contents of ".\VWManageInvApi\MockData.json"
 
@@ -204,24 +206,6 @@ The Webapp doesn't boast of it's design by it's own accord, but is made to unifo
 - [ ] Update Database Content
 
 See the [open issues](https://github.com/Thorin-the-Bearded/VW-Manage-Inventory/issues) for a full list of proposed features (and known issues).
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
