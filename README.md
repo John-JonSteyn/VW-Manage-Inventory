@@ -54,6 +54,7 @@
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#resources">Resources</a></li>
   </ol>
 </details>
 
@@ -71,10 +72,13 @@ Features:
   * Pricing
   * Features
   * Amount of stock
-2. Support:
-  * ...
+2. Supports:
+  * Addition & Reduction of Stock
+  * Dynamic Amount of Vehicle Models
+  * Landscape & Portrait Screens
 
 Disclaimer: This is not the official system used by Volkswagen Group. This project was developed as an assignment for a junior software-developer position.
+Note: This project was made within 94 hours without prior API, React nor Visual Studio experience.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -82,7 +86,9 @@ Disclaimer: This is not the official system used by Volkswagen Group. This proje
 
 ### Built With
 
+* [C#](https://docs.microsoft.com/en-us/dotnet/csharp/)
 * [JavaScript](https://www.javascript.com/)
+* [.Net 6.0 SDK](https://dotnet.microsoft.com/download/dotnet/6.0)
 * [React](https://reactjs.org/)
 * [Visual Studio Code](https://code.visualstudio.com/)
 
@@ -95,16 +101,89 @@ Disclaimer: This is not the official system used by Volkswagen Group. This proje
 
 ### Prerequisites
 
-* JavaScript
-* React
-* Visual Studio Code
+* [DotNet SDK](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks)
+* [NodeJS](https://nodejs.org/en/)
+* [React](https://reactjs.org/)
+* [Visual Studio](https://visualstudio.microsoft.com/)
+* [Web Browser](https://ismyinternetworking.com/)
 
 ### Installation
+
+1. Navigate to the directory you would like to install the Inventory Manager:
+  ```sh
+  cd [DirectoryPathHere]
+  ```
+2. Clone the repository by entering the following command into your shell:
+   ```sh
+   git clone Thorin-the-Bearded/VW-Manage-Inventory.git
+   ```
+### Running Front-End Server:
+
+3. Within your terminal, change to the "\.vwmanageinv\" directory with the following command:
+   ```sh
+   cd .\VW-Manage-Inventory\vwmanageinv\
+   ```
+4. Run the following command to run the server:
+   ```sh
+   npm start
+   ```
+
+### Running API:
+
+5. Open an additional terminal, change to the "\.VWManageInvApi\" directory with the following command:
+   ```sh
+   cd ..\VWManageInvApi\
+   ```
+6. Start the API using the following Dot Net:
+   ```sh
+   dotnet run
+   ```
+
+### Sending Information to API:
+
+7. Copy the contents of ".\VWManageInvApi\MockData.json"
+
+8. In another terminal. a list of vehicles can be sent to the API, by pasting the information in a POST:
+   ```sh
+   post -h Content-Type=application/json -c "[PASTE HERE]"
+   ```
+   (A platform such as [Postman](https://www.postman.com/downloads/) can also be utilised for these purposes)
+
+### Loading the site:
+
+9. In your browser, navigate to [The Inventory Management Webpage](http://localhost:3000/) at [http://localhost:3000/](http://localhost:3000/).
+
+### Publishing the Database:
+
+10. The database can be found by opening [Visual Studio](https://visualstudio.microsoft.com/) and navigating to '.\VW-Manage-Inventory\BranchInv\'
+
+11. The database can be published by double clicking "BranchInv.publish.xml"
+
+From here you can query the database with use of the CRUD procedures:
+- spCreateVehicle @Id int @Make text @Model text @Features text @Price text @NumStock int
+- spReadVehicle   (Reads all vehicles)
+- spUpdateVehicle @Id int @Make text @Model text @Features text @Price text @NumStock int
+- spDeleteVehicle @Id int
 
 
 
 <!-- USAGE EXAMPLES -->
 ## How to use Inventory Management System
+
+Admitedly difficult to set up, the inventory management system is easy to operate.
+
+Upon loading the webpage, the user is immediately faced with the necessary information neatly laid out before them. From here the (-) button can be pressed for each car sold and the (+) can be pressed for each new car added to the stock.
+
+[![Landscape 1][landscape-1]](https://raw.githubusercontent.com/Thorin-the-Bearded/VW-Manage-Inventory/main/images/landscapeView01.png)
+[![Landscape 2][landscape-2]](https://raw.githubusercontent.com/Thorin-the-Bearded/VW-Manage-Inventory/main/images/landscapeView02.png)
+
+Portrait view is also supported, so that staff could easily operate the site from their phone - enabling them to work from wherever, whenever.
+
+[![Portrait][portrait]](https://raw.githubusercontent.com/Thorin-the-Bearded/VW-Manage-Inventory/main/images/images/portraitView01.png)
+
+The Webapp doesn't boast of it's design by it's own accord, but is made to uniformly fit in with [Volkswagen Web Design](https://www.vw.com/en.html). The intended vehicles for this database can be found here:
+
+[![Models][models]](https://www.vw.co.za/en/models.html)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -113,11 +192,16 @@ Disclaimer: This is not the official system used by Volkswagen Group. This proje
 <!-- ROADMAP -->
 ## Roadmap
 
+- [x] Create Database
+- [x] Create Stored Procedures for CRUD
 - [x] Fix Broken Style Sheets
 - [x] Fix Broken Table Layout
-- [ ] Fix Blinding Navbar
-- [ ] Fix Broken Accordion
-- [ ] Support addition and deduction of stock
+- [x] Connect API
+- [X] Support addition and deduction of stock
+- [ ] Connect Database Connection
+- [ ] Fix Accordion
+- [ ] Fix Navbar
+- [ ] Update Database Content
 
 See the [open issues](https://github.com/Thorin-the-Bearded/VW-Manage-Inventory/issues) for a full list of proposed features (and known issues).
 
@@ -154,7 +238,18 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
+I found this project to be challenging, albeit rewarding. I would not have made it far if it had not been for:
 
+* [Astrid](https://twitter.com/Thorin_Bearded)'s loving support and encouragement.
+* [Dewald](https://github.com/dewald-L)'s technical expertise nudging me in the right direction.
+
+
+## Resources
+If you would like to create a similar project, here's a list of the main resources I used for this project:
+
+* [CodeCademy | Create a Front-End App with React](https://www.codecademy.com/learn/paths/build-web-apps-with-react)
+* [Microsoft Docs | Tutorial: Create a web API with ASP.NET Core](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-6.0&tabs=visual-studio-code)
+* [IAmTimCorey | SQL Data Tools In C# - Database Creation, Management, and Deployment in Visual Studio](https://www.youtube.com/watch?v=ijDcHGxyqE4)
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -170,3 +265,10 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 [issues-url]: https://github.com/Thorin-the-Bearded/VW-Manage-Inventory/issues
 [license-shield]: https://img.shields.io/github/license/Thorin-the-Bearded/VW-Manage-Inventory.svg?style=for-the-badge&color=151F5D
 [license-url]: https://github.com/Thorin-the-Bearded/VW-Manage-Inventory/blob/master/LICENSE.txt
+
+<!-- SCREENSHOTS -->
+[landscape-1]: images/landscapeView01.png
+[landscape-2]: images/landscapeView02.png
+[portrait]: images/portraitView01.png
+
+[models]: images/models.png
