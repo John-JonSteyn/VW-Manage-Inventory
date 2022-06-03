@@ -68,9 +68,6 @@
     <Build Include="dbo\Tables\ModelDetails.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="BranchInvDB.publish.xml" />
     <None Include="BranchInv.publish.xml" />
-    <None Include="BranchInv_1.publish.xml" />
-    <None Include="BranchInv_2.publish.xml" />
   </ItemGroup>
 </Project>
