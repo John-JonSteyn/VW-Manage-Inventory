@@ -4,3 +4,7 @@ D:\Projects\NewsClip\VW-Manage-Inventory\BranchInv\obj\Debug\BranchInv.dll
 D:\Projects\NewsClip\VW-Manage-Inventory\BranchInv\obj\Debug\BranchInv.pdb
 D:\Projects\NewsClip\VW-Manage-Inventory\BranchInv\bin\Debug\BranchInv.dll
 D:\Projects\NewsClip\VW-Manage-Inventory\BranchInv\bin\Debug\BranchInv.pdb
+D:\Projects\NewsClip\VW-Manage-Inventory\BranchInv\obj\Debug\Model.xml
+D:\Projects\NewsClip\VW-Manage-Inventory\BranchInv\obj\Debug\refactor.xml
+D:\Projects\NewsClip\VW-Manage-Inventory\BranchInv\obj\Debug\postdeploy.sql
+D:\Projects\NewsClip\VW-Manage-Inventory\BranchInv\obj\Debug\predeploy.sql
