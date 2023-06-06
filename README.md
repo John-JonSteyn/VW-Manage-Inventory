@@ -10,7 +10,7 @@
 
 <!-- PROJECT LOGO -->
 <br />
-  <a href="https://github.com/Thorin-the-Bearded/VS-Manage-Inventory/">
+  <a href="https://github.com/John-JonSteyn/VS-Manage-Inventory/">
     <img src="https://img.shields.io/badge/Inventory%20Management-22272E?logo=volkswagen&style=for-the-badge&logoColor=white)" alt="Volkswagen Inventory Management" height="120">
   </a>
 
@@ -21,12 +21,12 @@
   <p align="center">
     Stock Management system for Local Volkswagen Branches
     <br />
-    <a href="https://github.com/Thorin-the-Bearded/VW-Manage-Inventory/"><strong>View Source Code »</strong></a>
+    <a href="https://github.com/John-JonSteyn/VW-Manage-Inventory/"><strong>View Source Code »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Thorin-the-Bearded/VW-Manage-Inventory/issues">Report Bug</a>
+    <a href="https://github.com/John-JonSteyn/VW-Manage-Inventory/issues">Report Bug</a>
     ·
-    <a href="https://github.com/Thorin-the-Bearded/VW-Manage-Inventory/issues">Request Feature</a>
+    <a href="https://github.com/John-JonSteyn/VW-Manage-Inventory/issues">Request Feature</a>
   </p>
 </div>
 
@@ -110,7 +110,7 @@ Note: This project was made within 94 hours without prior API, React nor Visual 
 
 1. Clone the repository by entering the following command into your shell:
    ```sh
-   git clone Thorin-the-Bearded/VW-Manage-Inventory.git
+   git clone https://github.com/John-JonSteyn/VW-Manage-Inventory.git
    ```
 
 ### Running Front-End Server:
@@ -176,12 +176,12 @@ Admitedly difficult to set up, the inventory management system is easy to operat
 
 Upon loading the webpage, the user is immediately faced with the necessary information neatly laid out before them. From here the (-) button can be pressed for each car sold and the (+) can be pressed for each new car added to the stock.
 
-[![Landscape 1][landscape-1]](https://raw.githubusercontent.com/Thorin-the-Bearded/VW-Manage-Inventory/main/images/landscapeView01.png)
-[![Landscape 2][landscape-2]](https://raw.githubusercontent.com/Thorin-the-Bearded/VW-Manage-Inventory/main/images/landscapeView02.png)
+[![Landscape 1][landscape-1]](https://raw.githubusercontent.com/John-JonSteyn/VW-Manage-Inventory/main/images/landscapeView01.png)
+[![Landscape 2][landscape-2]](https://raw.githubusercontent.com/John-JonSteyn/VW-Manage-Inventory/main/images/landscapeView02.png)
 
 Portrait view is also supported, so that staff could easily operate the site from their phone - enabling them to work from wherever, whenever.
 
-[![Portrait][portrait]](https://raw.githubusercontent.com/Thorin-the-Bearded/VW-Manage-Inventory/main/images/images/portraitView01.png)
+[![Portrait][portrait]](https://raw.githubusercontent.com/John-JonSteyn/VW-Manage-Inventory/main/images/images/portraitView01.png)
 
 The Webapp doesn't boast of it's design by it's own accord, but is made to uniformly fit in with [Volkswagen Web Design](https://www.vw.com/en.html). The intended vehicles for this database can be found here:
 
